@@ -1344,6 +1344,151 @@ main{
     }
 }
 
+
+/* =========================================================
+   FIELD PHOTOS — ACADEMIC FIRST, RECREATIONAL LATER
+   ========================================================= */
+.fieldGallery{
+    margin-top:34px;
+    width:100%;
+}
+.fieldCarousel{
+    position:relative;
+    width:100%;
+    border:1px solid var(--line);
+    border-radius:24px;
+    overflow:hidden;
+    background:rgba(7,16,21,.88);
+    box-shadow:0 18px 50px rgba(0,0,0,.18);
+}
+.fieldViewport{
+    width:100%;
+    overflow:hidden;
+}
+.fieldTrack{
+    display:flex;
+    transition:transform .55s cubic-bezier(.22,.61,.36,1);
+    will-change:transform;
+}
+.fieldSlide{
+    flex:0 0 100%;
+    min-width:100%;
+    position:relative;
+}
+.fieldSlide img{
+    width:100%;
+    height:520px;
+    display:block;
+    object-fit:contain;
+    background:#071015;
+}
+.fieldOverlay{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:80px 30px 25px;
+    background:linear-gradient(transparent,rgba(4,10,13,.94));
+    pointer-events:none;
+}
+.fieldCategory{
+    display:inline-block;
+    margin-bottom:7px;
+    color:var(--cyan);
+    font-size:.68rem;
+    font-weight:800;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+}
+.fieldOverlay h3{
+    margin:0;
+    color:var(--text);
+    font-size:1.15rem;
+}
+.fieldOverlay p{
+    margin:5px 0 0;
+    color:var(--muted);
+    font-size:.86rem;
+}
+.fieldArrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:5;
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.2);
+    background:rgba(5,13,17,.78);
+    color:var(--text);
+    display:grid;
+    place-items:center;
+    font-size:1.35rem;
+    cursor:pointer;
+    backdrop-filter:blur(8px);
+    transition:.2s ease;
+}
+.fieldArrow:hover{
+    color:var(--cyan);
+    border-color:var(--cyan);
+    transform:translateY(-50%) scale(1.05);
+}
+.fieldPrev{left:18px}
+.fieldNext{right:18px}
+.fieldControls{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:16px 16px 18px;
+    background:rgba(7,16,21,.95);
+}
+.fieldDot{
+    width:8px;
+    height:8px;
+    padding:0;
+    border:0;
+    border-radius:50%;
+    background:rgba(194,225,217,.28);
+    cursor:pointer;
+    transition:.2s ease;
+}
+.fieldDot.active{
+    width:22px;
+    border-radius:8px;
+    background:var(--cyan);
+}
+.fieldCounter{
+    position:absolute;
+    top:18px;
+    right:18px;
+    z-index:4;
+    padding:6px 10px;
+    border-radius:999px;
+    color:var(--text);
+    background:rgba(5,13,17,.72);
+    border:1px solid rgba(255,255,255,.14);
+    font-size:.72rem;
+    backdrop-filter:blur(8px);
+}
+.fieldIntro{
+    color:var(--muted);
+    max-width:760px;
+    line-height:1.7;
+}
+@media(max-width:850px){
+    .fieldSlide img{height:420px}
+}
+@media(max-width:560px){
+    .fieldSlide img{height:330px}
+    .fieldOverlay{padding:70px 18px 18px}
+    .fieldOverlay h3{font-size:1rem}
+    .fieldOverlay p{font-size:.78rem}
+    .fieldArrow{width:40px;height:40px}
+    .fieldPrev{left:12px}
+    .fieldNext{right:12px}
+}
+
 </style>
 
 </head>
@@ -1392,6 +1537,10 @@ Skills
 
 <a href="#achievements">
 Achievements
+</a>
+
+<a href="#fieldphotos">
+Field Photos
 </a>
 
 <a href="#contact">
@@ -2368,6 +2517,173 @@ Presidency University, July–September 2022.
 </section>
 
 
+
+<!-- =========================================================
+     FIELD PHOTOGRAPHS
+     ========================================================= -->
+
+<section id="fieldphotos" class="page-section">
+
+<div class="wrap">
+
+<div class="sectionHead">
+
+<div>
+
+<div class="eyebrow">
+Field · Photographs
+</div>
+
+<h2>
+Field Photos
+</h2>
+
+<p class="fieldIntro">
+A visual record of field-based research, high-altitude observations,
+geophysical investigations and Himalayan field experiences.
+Academic and research-oriented photographs appear first, followed
+by team and recreational field photographs.
+</p>
+
+</div>
+
+</div>
+
+<div class="fieldGallery">
+
+<div class="fieldCarousel" aria-label="Srijan Mukherjee field photographs">
+
+<div class="fieldViewport">
+
+<div class="fieldTrack">
+
+            <article class="fieldSlide">
+                <img src="assets/01_IMG_8807_enhanced.jpg" alt="Geophysical field investigation in the high-altitude landscape.">
+                <div class="fieldOverlay">
+                    <div class="fieldCategory">Research & Geophysics</div>
+                    <h3>Geophysical field investigation in the high-altitude landscape.</h3>
+                </div>
+            </article>
+            <article class="fieldSlide">
+                <img src="assets/02_IMG_8926_enhanced.jpg" alt="Ground investigation and field measurements in alpine terrain.">
+                <div class="fieldOverlay">
+                    <div class="fieldCategory">Permafrost Fieldwork</div>
+                    <h3>Ground investigation and field measurements in alpine terrain.</h3>
+                </div>
+            </article>
+            <article class="fieldSlide">
+                <img src="assets/03_IMG_9072_enhanced.jpg" alt="Field observation of frozen ground and subsurface conditions.">
+                <div class="fieldOverlay">
+                    <div class="fieldCategory">Frozen-Ground Investigation</div>
+                    <h3>Field observation of frozen ground and subsurface conditions.</h3>
+                </div>
+            </article>
+            <article class="fieldSlide">
+                <img src="assets/04_IMG_8944_enhanced.jpg" alt="Ground-based geophysical survey in a Himalayan setting.">
+                <div class="fieldOverlay">
+                    <div class="fieldCategory">Geophysical Survey</div>
+                    <h3>Ground-based geophysical survey in a Himalayan setting.</h3>
+                </div>
+            </article>
+            <article class="fieldSlide">
+                <img src="assets/05_IMG_8875_enhanced.jpg" alt="High-altitude wetland and mountain landscape observations.">
+                <div class="fieldOverlay">
+                    <div class="fieldCategory">Cryosphere Landscape</div>
+                    <h3>High-altitude wetland and mountain landscape observations.</h3>
+                </div>
+            </article>
+            <article class="fieldSlide">
+                <img src="assets/06_IMG_8801_enhanced.jpg" alt="Ladakh landscape during field-based environmental investigations.">
+                <div class="fieldOverlay">
+                    <div class="fieldCategory">Field Environment</div>
+                    <h3>Ladakh landscape during field-based environmental investigations.</h3>
+                </div>
+            </article>
+            <article class="fieldSlide">
+                <img src="assets/07_IMG_8950_enhanced.jpg" alt="High-altitude glacial landscape and field reconnaissance.">
+                <div class="fieldOverlay">
+                    <div class="fieldCategory">Glacial Field Visit</div>
+                    <h3>High-altitude glacial landscape and field reconnaissance.</h3>
+                </div>
+            </article>
+            <article class="fieldSlide">
+                <img src="assets/08_IMG-20260408-WA0067_enhanced.jpg" alt="Research team during Himalayan fieldwork.">
+                <div class="fieldOverlay">
+                    <div class="fieldCategory">Field Team</div>
+                    <h3>Research team during Himalayan fieldwork.</h3>
+                </div>
+            </article>
+            <article class="fieldSlide">
+                <img src="assets/09_IMG-20260407-WA0039_enhanced.jpg" alt="Team fieldwork in a mountainous environment.">
+                <div class="fieldOverlay">
+                    <div class="fieldCategory">Field Team</div>
+                    <h3>Team fieldwork in a mountainous environment.</h3>
+                </div>
+            </article>
+            <article class="fieldSlide">
+                <img src="assets/10_IMG-20260411-WA0024_enhanced.jpg" alt="Field team during a high-altitude field visit.">
+                <div class="fieldOverlay">
+                    <div class="fieldCategory">Field Team</div>
+                    <h3>Field team during a high-altitude field visit.</h3>
+                </div>
+            </article>
+            <article class="fieldSlide">
+                <img src="assets/11_IMG-20260411-WA0014_enhanced.jpg" alt="Team photograph during challenging mountain weather.">
+                <div class="fieldOverlay">
+                    <div class="fieldCategory">Field Conditions</div>
+                    <h3>Team photograph during challenging mountain weather.</h3>
+                </div>
+            </article>
+            <article class="fieldSlide">
+                <img src="assets/12_IMG_20260719_115101716_MP_enhanced.jpg" alt="Hydrothermal spring and high-altitude hydrogeological environment.">
+                <div class="fieldOverlay">
+                    <div class="fieldCategory">Hydrogeological Setting</div>
+                    <h3>Hydrothermal spring and high-altitude hydrogeological environment.</h3>
+                </div>
+            </article>
+            <article class="fieldSlide">
+                <img src="assets/13_IMG_9295_enhanced.jpg" alt="High-altitude Himalayan environment and field surroundings.">
+                <div class="fieldOverlay">
+                    <div class="fieldCategory">Field & Natural Environment</div>
+                    <h3>High-altitude Himalayan environment and field surroundings.</h3>
+                </div>
+            </article>
+</div>
+
+</div>
+
+<div class="fieldCounter">
+<span id="fieldCurrent">01</span> / 13
+</div>
+
+<button class="fieldArrow fieldPrev" type="button" aria-label="Previous field photograph">‹</button>
+<button class="fieldArrow fieldNext" type="button" aria-label="Next field photograph">›</button>
+
+<div class="fieldControls">
+<button class="fieldDot active" type="button" aria-label="Open field photograph 1"></button>
+<button class="fieldDot" type="button" aria-label="Open field photograph 2"></button>
+<button class="fieldDot" type="button" aria-label="Open field photograph 3"></button>
+<button class="fieldDot" type="button" aria-label="Open field photograph 4"></button>
+<button class="fieldDot" type="button" aria-label="Open field photograph 5"></button>
+<button class="fieldDot" type="button" aria-label="Open field photograph 6"></button>
+<button class="fieldDot" type="button" aria-label="Open field photograph 7"></button>
+<button class="fieldDot" type="button" aria-label="Open field photograph 8"></button>
+<button class="fieldDot" type="button" aria-label="Open field photograph 9"></button>
+<button class="fieldDot" type="button" aria-label="Open field photograph 10"></button>
+<button class="fieldDot" type="button" aria-label="Open field photograph 11"></button>
+<button class="fieldDot" type="button" aria-label="Open field photograph 12"></button>
+<button class="fieldDot" type="button" aria-label="Open field photograph 13"></button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
 <!-- =========================================================
      CONTACT
      ========================================================= -->
@@ -2379,7 +2695,7 @@ Presidency University, July–September 2022.
         <div>
 
             <div class="eyebrow">
-                06 · Contact
+                07 · Contact
             </div>
 
             <h2 style="font-size:2.4rem;margin:8px 0">
@@ -2556,6 +2872,75 @@ document.addEventListener("DOMContentLoaded", function () {
         : "home";
 
     showSection(initialId, false);
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector(".fieldTrack");
+    const slides = document.querySelectorAll(".fieldSlide");
+    const dots = document.querySelectorAll(".fieldDot");
+    const prev = document.querySelector(".fieldPrev");
+    const next = document.querySelector(".fieldNext");
+    const counter = document.querySelector("#fieldCurrent");
+
+    if (!track || !slides.length) return;
+
+    let current = 0;
+    let timer = null;
+
+    function showField(index, restart = true) {
+        current = (index + slides.length) % slides.length;
+        track.style.transform = "translateX(-" + (current * 100) + "%)";
+
+        dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === current);
+        });
+
+        if (counter) {
+            counter.textContent = String(current + 1).padStart(2, "0");
+        }
+
+        if (restart) startAuto();
+    }
+
+    function startAuto() {
+        clearInterval(timer);
+        timer = setInterval(() => showField(current + 1, false), 6000);
+    }
+
+    prev.addEventListener("click", () => showField(current - 1));
+    next.addEventListener("click", () => showField(current + 1));
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => showField(i));
+    });
+
+    // Keyboard navigation while the carousel is focused.
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") showField(current - 1);
+        if (event.key === "ArrowRight") showField(current + 1);
+    });
+
+    // Touch/swipe support.
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    track.addEventListener("touchstart", e => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, {passive:true});
+
+    track.addEventListener("touchend", e => {
+        touchEndX = e.changedTouches[0].screenX;
+        const distance = touchEndX - touchStartX;
+        if (Math.abs(distance) > 45) {
+            showField(distance > 0 ? current - 1 : current + 1);
+        }
+    }, {passive:true});
+
+    showField(0, false);
+    startAuto();
 });
 </script>
 
